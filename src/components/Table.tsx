@@ -5,7 +5,7 @@ import HeaderTableInformation from "./HeaderTableInformation";
 import RowInformation from "./RowInformation";
 
 interface Props {
-  reposInfo: ReposInfo;
+  reposInfo: ReposInfo
 }
 
 const Table: React.FC<Props> = ({ reposInfo }) => {
@@ -25,8 +25,8 @@ const Table: React.FC<Props> = ({ reposInfo }) => {
             <table className="min-w-full leading-normal">
               <thead>
                 <tr>
-                  {HeaderTable.map((info) => (
-                    <HeaderTableInformation title={info.title} />
+                  {HeaderTable.map((info, index) => (
+                    <HeaderTableInformation key={index} title={info.title} />
                   ))}
                 </tr>
               </thead>
