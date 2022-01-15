@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GitHubAPI from "../api/GitHubAPI";
 import { UserResponse } from "../interfaces/UserInterface";
 
@@ -7,7 +7,7 @@ const useUser = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getUserData = async () => {
-    const resp = await GitHubAPI.get<UserResponse>("/MartinLarios94");
+    const resp = await GitHubAPI.get<UserResponse>("/users/MartinLarios94");
     setUser(resp.data);
     setIsLoading(false);
   };

@@ -1,9 +1,11 @@
 import React from 'react'
+import {useParams} from 'react-router-dom';
 
 const Commits = () => {
+    const params = useParams();
     return (
         <div>
-            Commits Page
+            {JSON.stringify(params, null, 5)}
         </div>
     )
 }
