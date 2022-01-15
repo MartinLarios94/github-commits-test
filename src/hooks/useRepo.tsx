@@ -7,16 +7,6 @@ interface useRepoProps {
   userName: string;
 }
 
-interface useRepoState {
-  gitHubName: string;
-  reposInfo: Array<{
-    name: string;
-    fullName: string;
-    repoUrl: string;
-    totalCommits: number;
-  }>;
-}
-
 const useRepo = ({ userName }: useRepoProps) => {
   const [repoInfo, setRepoInfo] = useState<ReposInfo>();
   const [isLoading, setIsLoading] = useState(true);
