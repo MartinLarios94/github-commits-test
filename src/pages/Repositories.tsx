@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
+import Table from "../components/Table";
 import useRepo from "../hooks/useRepo";
 
 const Repositories = () => {
@@ -10,7 +11,7 @@ const Repositories = () => {
   if (isLoading) {
     return <Loading />;
   }
-  return <div>{JSON.stringify(repoInfo, null, 5)}</div>;
+  return <Table reposInfo={repoInfo!} />
 };
 
 export default Repositories;

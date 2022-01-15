@@ -80,6 +80,20 @@ export interface ReposResponse {
     default_branch:    DefaultBranch;
 }
 
+export interface ReposInfo {
+    gitHubName: string;
+    avatarUrl: string;
+    reposInfo: RepositoriesInformation[]
+}
+
+export interface RepositoriesInformation {
+    name: string;
+    fullName: string;
+    repoUrl: string;
+    createdAt: string;
+    totalCommits: number;
+}
+
 export enum DefaultBranch {
     GhPages = "gh-pages",
     Main = "main",

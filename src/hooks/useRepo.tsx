@@ -1,45 +1,53 @@
 import { useEffect, useState } from "react";
 import GitHubAPI from "../api/GitHubAPI";
 import { CommitsResponse } from "../interfaces/CommitsResponse";
-import { ReposResponse } from "../interfaces/ReposInterface";
+import { ReposInfo, ReposResponse } from "../interfaces/ReposInterface";
 
 interface useRepoProps {
   userName: string;
 }
 
 interface useRepoState {
-  name: string;
-  fullName: string;
-  repoUrl: string;
-  totalCommits: number;
+  gitHubName: string;
+  reposInfo: Array<{
+    name: string;
+    fullName: string;
+    repoUrl: string;
+    totalCommits: number;
+  }>;
 }
 
 const useRepo = ({ userName }: useRepoProps) => {
-  const [repos, setRepos] = useState<ReposResponse[]>([]);
-  const [repoInfo, setRepoInfo] = useState<useRepoState[]>([]);
+  const [repoInfo, setRepoInfo] = useState<ReposInfo>();
   const [isLoading, setIsLoading] = useState(true);
 
   const getRepoData = async () => {
-    const resp = await GitHubAPI.get<ReposResponse[]>(`/users/${userName}/repos`);
-    setRepos(resp.data);
+    const resp = await GitHubAPI.get<ReposResponse[]>(
+      `/users/${userName}/repos`
+    );
     getNewRepoData(resp.data);
   };
 
   const getNewRepoData = async (repos: ReposResponse[]) => {
-    let info: useRepoState[] = []
+    let info = [];
     for (let index = 0; index < repos.length; index++) {
       const resp = await GitHubAPI.get<CommitsResponse[]>(
         `/repos/${userName}/${repos[index].name}/commits`
       );
-      const data: useRepoState = {
+      const data  = {
         name: repos[index].name,
         fullName: repos[index].full_name,
         repoUrl: repos[index].html_url,
+        createdAt: repos[index].created_at,
         totalCommits: resp.data.length,
-      }
-      info.push(data)
+      };
+      info.push(data);
     }
-    setRepoInfo(info);
+    setRepoInfo({
+      gitHubName: userName,
+      avatarUrl: repos[0].owner.avatar_url,
+      reposInfo: info
+    });
     setIsLoading(false);
   };
 
