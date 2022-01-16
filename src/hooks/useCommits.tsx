@@ -23,8 +23,12 @@ const useCommits = ({ userName, repoName }: useCommitsProps) => {
       return {
         committerName: info.commit.committer.name,
         commitDate: info.commit.committer.date,
-        committerAvatarUrl: info.committer.avatar_url,
+        committerAvatarUrl:
+          info.committer === null
+            ? "/assets/user-solid.svg"
+            : info.committer.avatar_url,
         commitMessage: info.commit.message,
+        commitUrl: info.html_url,
       };
     });
     setCommitInfo(info);

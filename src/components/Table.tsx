@@ -5,7 +5,7 @@ import HeaderTableInformation from "./HeaderTableInformation";
 import RowInformation from "./RowInformation";
 
 interface Props {
-  reposInfo: ReposInfo
+  reposInfo: ReposInfo;
 }
 
 const Table: React.FC<Props> = ({ reposInfo }) => {
@@ -17,6 +17,10 @@ const Table: React.FC<Props> = ({ reposInfo }) => {
             {reposInfo.gitHubName}
           </h2>
           <span className="text-xs">Repositories Information</span>
+        </div>
+        <div className="flex flex-row items-center gap-2 border-2 border-cyan-200 p-2">
+         <div className="w-10 h-10 bg-red-100 border-white border-2" />
+          <span className="text-xs font-semibold">Current Repository</span>
         </div>
       </div>
       <div>

@@ -2,6 +2,7 @@
 
 export interface CommitsResponse {
   commit: Commit;
+  html_url: string;
   committer: CommitsResponseAuthor;
 }
 
@@ -10,6 +11,7 @@ export interface CommitResp {
   commitDate: string;
   committerAvatarUrl: string;
   commitMessage: string;
+  commitUrl: string;
 }
 
 export interface CommitsResponseAuthor {

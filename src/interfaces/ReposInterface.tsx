@@ -87,6 +87,7 @@ export interface ReposInfo {
 }
 
 export interface RepositoriesInformation {
+    id: number,
     name: string;
     fullName: string;
     repoUrl: string;

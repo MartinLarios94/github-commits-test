@@ -25,6 +25,7 @@ const useRepo = ({ userName }: useRepoProps) => {
         `/repos/${userName}/${repos[index].name}/commits`
       );
       const data  = {
+        id: repos[index].id,
         name: repos[index].name,
         fullName: repos[index].full_name,
         repoUrl: repos[index].html_url,

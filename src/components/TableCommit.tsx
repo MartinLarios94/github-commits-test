@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { headersTitle } from "../helpers/headerTableCommit";
 import { CommitResp } from "../interfaces/CommitsResponse";
 import HeaderTableCommit from "./HeaderTableCommit";
@@ -12,10 +12,10 @@ interface Props {
 }
 
 const TableCommit: React.FC<Props> = ({ repoName, userName, commitInfo }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <section className="py-1">
-      <div className="w-full xl:w-4/6 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+      <div className="w-full mb-12 xl:mb-0 px-4 mx-auto mt-24">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
           <div className="rounded-t mb-0 px-4 py-3 border-0">
             <div className="flex flex-wrap items-center">

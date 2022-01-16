@@ -1,4 +1,5 @@
 import React from "react";
+import { REPO_ID } from "../helpers/currentRepoId";
 import { CommitResp } from "../interfaces/CommitsResponse";
 
 interface Props {
@@ -29,6 +30,9 @@ const RowInformationCommit: React.FC<Props> = ({ commitInfo }) => {
       </td>
       <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
         {commitInfo.commitMessage}
+      </td>
+      <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4 hover:text-indigo-500 hover:underline">
+        <a href={commitInfo.commitUrl}>{commitInfo.commitUrl}</a>
       </td>
     </tr>
   );
