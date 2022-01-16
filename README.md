@@ -1,47 +1,41 @@
-# Getting Started with Create React App
+![ts](https://badgen.net/badge/-/TypeScript/blue?icon=typescript&label)
+![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)
+![Strict TypeScript Checked](https://badgen.net/badge/TS/Strict)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GitHub Commits Test.
 
-## Available Scripts
+## Tech stack
+- 🔥 ReactJs
+- 🛂 Strict TypeScript
+- 🎨 Tailwind CSS
+- 🎴 React Router Dom v6
+- 🍖 Axios
 
-In the project directory, you can run:
+## How to use
 
-### `yarn start`
+Install dependencies and run the example:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn install
+yarn start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Review
+- When the app load the first time, create automatically a ```key``` called ```users``` in the ```localStorage```, this key contains an userName, in this case is my gitHub userName: ```MartinLarios94```.
 
-### `yarn test`
+- In the NavBar there is a button called ```Settings``` and the user will be able to add more GitHub Users, the userName ```MUST BE THE EXACTLY GITHUB USERNAME```, then the app load automatically the info of each user registered.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When the user clicks on any card, he/she will be redirected to all the information of the selected user's repositories.
 
-### `yarn build`
+- In the last column of the table the user will be able to click on the column and then will be redirected to all the repository's commits.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- I deplyed the app on Netlify.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Video Url
+https://www.dropbox.com/s/a6cvuf5woeytvkg/Screen%20Recording%202022-01-16%20at%2011.12.21.mov?dl=0
 
-### `yarn eject`
+## Netlify
+- https://github-commits-martin-larios.netlify.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# github-commits-test
