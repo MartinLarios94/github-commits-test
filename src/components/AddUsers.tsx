@@ -19,7 +19,7 @@ const AddUsers: React.FC = () => {
 
   return (
     <div className="flex items-start gap-5 mt-20 justify-center h-screen">
-      <form action="">
+      <form action="/">
         <div className="bg-white py-6 rounded-md px-10 max-w-lg shadow-md">
           <h1 className="text-center text-lg font-bold text-gray-500">
             Add New User
