@@ -29,13 +29,14 @@ yarn start
 
 - In the last column of the table the user will be able to click on the column and then will be redirected to all the repository's commits.
 
-## Demo
 
-- I deplyed the app on Netlify.
+## Netlify
+- I deployed the app on Netlify.
+
+- https://github-commits-martin-larios.netlify.app/
+
+## Demo
 
 ### Video Url
 https://www.dropbox.com/s/a6cvuf5woeytvkg/Screen%20Recording%202022-01-16%20at%2011.12.21.mov?dl=0
-
-## Netlify
-- https://github-commits-martin-larios.netlify.app/
 
