@@ -5,17 +5,19 @@ import UserInfo from "../components/UserInfo";
 import useUser from "../hooks/useUser";
 
 const Home = () => {
-  const { isLoading, user } = useUser();
+  const { isLoading, usersInfo } = useUser();
 
   if (isLoading) {
     return <Loading />;
   }
   return (
-    <div className="mx-60 mt-10 grid grid-cols-1">
-      <Container>
-        <UserInfo userInfo={user!} />
-      </Container>
-    </div>
+    <Container>
+      <div className="mx-40 mt-10 grid grid-cols-3">
+        {
+          usersInfo.map(info => <UserInfo userInfo={info} />)
+        }
+      </div>
+    </Container>
   );
 };
 

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Container from "../components/Container";
+import AddUsers from "../components/AddUsers";
 
 const Settings = () => {
-    return (
-        <div>
-            Settings Page
-        </div>
-    )
-}
+  return (
+    <Container>
+      <AddUsers />
+    </Container>
+  );
+};
 
-export default Settings
+export default Settings;
